@@ -22,11 +22,12 @@ from PIL import Image
 
 img = Image.open('GE.png')
 load_dotenv()
-brwoserless_api_key = "252b4871-1c98-496b-bd79-b93c4df1c991"
-serper_api_key = "0caf0e7f904e37a40d8d993e4a9c2c6209886997"
-OPENAI_API_KEY= "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"
-# 1. Tool for search
+brwoserless_api_key = os.getenv("BROWSERLESS_API_KEY")
+serper_api_key = os.getenv("SERP_API_KEY")
+OPENAI_API_KEY= os.getenv("OPENAI_API_KEY")
 
+
+# 1. Tool for search
 
 def search(query):
     url = "https://google.serper.dev/search"
