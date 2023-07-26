@@ -186,7 +186,7 @@ agent_kwargs = {
     "system_message": system_message,
 }
 
-llm = ChatOpenAI(temperature=0, openai_api_key=OPENAI_API_KEY, model="gpt-3.5-turbo")
+llm = ChatOpenAI(temperature=0, openai_api_key="OPENAI_API_KEY", model="gpt-3.5-turbo")
 memory = ConversationSummaryBufferMemory(
     memory_key="memory", return_messages=True, llm=llm, max_token_limit=1000)
 
